@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400700&family=Montserrat:wght@400600700&family=Raleway:wght@400600700&display=swap')
+
+$transition: 0.3s
+
+
+
+*
+	outline: none !important
+
+img 
+	max-width: 100%
+	height: auto
+
+body 
+	font-family: "Raleway", sans-serif
+	display: flex 
+	flex-direction: column
+	min-height: 100vh
+
+a 
+	text-decoration: none !important
+	transition: $transition
+	&:hover
+		opacity: 0.5 
+
+.container 
+	@media (max-width: 1230px)
+		max-width: 1200px
+
+.navbarbox
+	position: absolute
+	top: -99px
+	margin-top: 99px
+	left: 0
+	right: 0
+	z-index: 1031
+	transition: top 0.5s
+	&.fixed-top
+		position: fixed
+		top: 0
+		margin-top: 0
+		transition: top 0.5s
+
+.navbar
+	background: #222222
+	padding: 19px 16px
+	color: #fff
+	.navbar-brand
+		@media (min-width: 1200px)
+			padding: 20px 0px
+		img 
+			@media (max-width: 1200px)
+				width: 180px
+	.nav-link
+		text-transform: uppercase
+		color: #fff !important
+		font-size: 14px
+		padding: 10px 18px !important
+		&:hover
+			opacity: 0.4
+
+
+.sandwich
+	display: inline-block
+	color: #fff
+	cursor: pointer
+	transition: none
+	padding: 0
+	border: 0
+	background-color: #222222
+	transition: $transition
+	&:hover 
+		opacity: .6
+	&:before
+		width: 26px
+	span
+		width: 26px
+	&:after
+		width: 26px
+	&:before, &:after
+		content: ''
+	span, &:after
+		margin-top: 6px
+	span, &:before, &:after
+		display: block
+		transition: $transition
+		transform-origin: right center
+		border-top: 2px solid #fff
+		margin-left: auto
+	&:not(.collapsed)
+		&:before
+			transform: translateY(-1px) rotate(-45deg)
+		span
+			width: 0
+			opacity: 0
+		&:after
+			transform: translateY(1px) rotate(45deg)
+	&:hover 
+		opacity: .8
+
+.btn-up
+	position: fixed
+	right: 25px
+	bottom: 25px
+	width: 32px
+	height: 32px
+	border-radius: 2px
+	cursor: pointer
+	background: #433263
+	color: #fff
+	text-align: center
+	line-height: 32px
+	transition: 0.3s
+	@media (max-width: 767.98px)
+		opacity: 0.5
+	&:hover
+		line-height: 25px
+
+.dd1
+	.dropdown-toggle
+		padding-right: 36px !important
+		&:after 
+			display: none !important
+		.fa-chevron-right
+			position: absolute
+			right: 20px
+			top: 12px
+		@media (min-width: 1200px)
+			&:hover
+				~ .dropdown-menu
+					display: block
+	.dropdown-menu
+		background: #433263
+		text-transform: uppercase
+		padding: 0px
+		margin: 0px
+		border: 0
+		border-bottom: 3px solid #b3a3d0
+		border-radius: 0
+		@media (min-width: 1200px)
+			display: none
+			&:hover
+				display: block
+		@media (min-width: 768px)
+			max-width: 50%
+		@media (max-width: 767.98px)
+			max-width: 80%
+		.dropdown-item
+			color: #fff
+			padding: 10px 14px
+			font-size: 14px
+			&:hover, &:focus
+				color: #fff
+				background: #b3a3d0
+				opacity: 1
+			>.fa-chevron-right
+				@media (max-width: 991.98px)
+					transform: rotate(90deg)
+			>.fa-chevron-left
+				@media (max-width: 991.98px)
+					transform: rotate(-90deg)
+			.item-r 
+				@media (max-width: 991.98px)
+					display: none
+			.item-l
+				@media (min-width: 992px)
+					display: none
+
+
+
+.typed-m
+	margin-top: 250px
+
+.dropdown-j
+	position: relative
+	.dropdown-menu-j
+		position: absolute
+		top: 0
+		left: 100%
+		min-width: 160px
+		background: #433263
+		border-bottom: 3px solid #b3a3d0
+		display: none
+		z-index: 10
+		&:hover
+			display: block
+		@media (max-width: 991.98px)
+			left: 0
+			top: 100%
+	.dropdown-toggle-j
+		display: flex
+		align-items: center
+		&:hover
+			+ .dropdown-menu-j
+				display: block 
+
+.dropdown-l
+	position: relative
+	.dropdown-menu-l
+		position: absolute
+		top: 0
+		right: 100%
+		min-width: 160px
+		background: #433263
+		border-bottom: 3px solid #b3a3d0
+		display: none
+		z-index: 10
+		&:hover
+			display: block
+		@media (max-width: 991.98px)
+			left: 0
+			top: 100%
+	.dropdown-toggle-l
+		display: flex
+		align-items: center
+		&:hover
+			+ .dropdown-menu-l
+				display: block 
+
+.icon-link
+	a 
+		color: #fff !important
+		font-size: 28px
+		svg, g 
+			transition: $transition
+		&:hover
+			color: #a778ff !important
+			opacity: 1
+			svg, g 
+				fill: #a778ff
+
+.loc-link
+	a 
+		color: #ccc9 !important
+		font-size: 20px
+		svg, g 
+			transition: $transition
+		&:hover
+			color: #a778ff !important
+			opacity: 1
+			svg, g 
+				fill: #a778ff
+
+.phone-link
+	a 
+		color: #a778ff !important
+		font-size: 28px
+		transition: $transition
+		&:hover
+			opacity: 0.5
+
+.fs-0
+	font-size: 0
+
+.row-1
+	margin-left: -8px
+	margin-right: -8px
+	> [class*='col']		
+		padding-left: 8px				
+		padding-right: 8px
+
+.w-300
+	@media (min-width: 1200px)
+		width: 300px !important
+
+.btn-date
+	color: #000
+	&:hover, &:focus
+		color: #000
+
+.daterangepicker	
+	.applyBtn
+		background: orange !important
+		border-color: orange !important
+
+.form-check-label
+	cursor: pointer
+	input[type="checkbox"]
+		display: none
+		~ .f
+			display: inline-block
+			width: 14px
+			height: 14px
+			margin-right: 2px
+			border: 1px solid #6b6b6b
+			border-radius: 100px
+			position: relative
+		&:checked
+			~ .f
+				transition: $transition
+				background: #433263
+				border-color: #433263
+				color: #433263
+				&:after
+					content: ''
+					width: 1px  
+					height: 6px
+					position: absolute
+					top: 40%
+					left: 29%
+					transform: rotate(-45deg)
+					border: 1px solid #fff
+					border-radius: 100px
+				&:before 
+					content: ''
+					width: 1px  
+					height: 9.25px
+					position: absolute
+					top: 20%
+					left: 60%
+					transform: rotate(40deg)
+					border: 1px solid #fff
+					border-radius: 100px
+
+.switch-wrap
+	display: flex
+	align-items: center
+	cursor: pointer
+	position: relative
+	padding: 0px 0px
+	span 
+		flex-grow: 1
+		flex-basis: 0
+		max-width: 100%
+		font-size: 14px 
+		color: #fff
+	.lever
+		flex: 0 0 auto
+		position: relative
+		width: 25px
+		height: 12px
+		background-color: gray 
+		border-radius: 100px
+		margin-right: 5px
+		border-color: red
+		background-color: red
+		&:last-child
+			margin-right: 0
+			margin-left: 5px
+		&:after
+			content: ""
+			position: absolute
+			width: 18px
+			height: 18px
+			background-color: white
+			border-radius: 100px
+			left: 0px
+			top: 50%
+			transition: .3s
+			transform: translateY(-50%)
+	input
+		opacity: 0
+		width: 0
+		height: 0
+		position: absolute
+		&:checked ~ .lever
+			border-color: #4cd964
+			background-color: #4cd964
+			&:after
+				left: 8px
